@@ -42,3 +42,49 @@ function isOn(){
 function pic() {
     return document.getElementById("bulb").getAttribute('src');
 }
+
+
+
+function SecondDemoClick()
+{
+    var element = document.getElementById("timeToPlay").value;
+    var enteredTime = element.split(":");
+    var enteredH = enteredTime[0];
+    var enteredM = enteredTime[1];
+
+
+    var currDate = new Date();
+    var currH = currDate.getHours();
+    var currM = currDate.getMinutes();
+
+
+
+
+    var when = enteredH + ":" + enteredM;
+    var now = currH + ":" + currM;
+
+    checkTime(when, now);
+
+}
+
+function checkTime(_when, _now)
+{
+  if(_when === _now)
+  {
+    clearInterval(inter);
+    var linkForUse = document.getElementById("linkToPlay").value;
+    OpenInNewTabInBrowser(linkForUse);
+  }
+  else
+  {
+   clearInterval(inter);
+   var inter = setInterval(checkTime, 1 * 1000);
+  }
+}
+
+
+function OpenInNewTabInBrowser(url)
+{
+  var win = window.open(url, '_blank');
+  win.focus();
+}

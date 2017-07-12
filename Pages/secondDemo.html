@@ -1,28 +1,59 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Second Demo</title>
+  <meta charset="UTF-8">
+  <title>Second Demo</title>
 
-    <link rel="stylesheet" href="../Styles/style.css">
+  <link rel="stylesheet" href="../Styles/style.css">
+  <script src="../Scripts/script_firstDemo.js"></script>
+
 </head>
+
 <body>
-
-<div class="mainSection">
-<h1 class="demo_header1">Second demo!</h1>
-
-</div>
+  <div class="header">
+    <h1 class="demo_header1">Online alarm with favourite video!</h1>
+  </div>
 
 
 
+  <div class="mainSection">
+    <h2 class="secondDemoH2">
+    How it works?
+    </h2>
+    <p class="secondDemoDescription">
+      You have to copy a video URL(it is better if it is a song) and paste it in the correct field.
+       Then you have to set a time when the alarm will turn on and you will be surprised at that time
+       with your favourite song. This is a great way to surprise your
+      colleagues and family memebers!
+    </p>
 
-<div class="bottom">
-    <form action="firstDemo.html">
-        <input class="previousDemo" type="submit" value="Previous Demo">
-    </form>
-    <form action="thirdDemo.html">
-        <input class="nextDemo" type="submit" value="Next Demo">
-    </form>
-</div>
+
+    <div clas="secondDemo">
+      <span>Enter the link here:</span>
+      <input class="in" id="linkToPlay" type="text" placeholder="Link">
+      <br />
+      <span>Enter the time here:</span>
+      <input class="in" id="timeToPlay" type="time">
+      <br>
+
+      <button type="button" id="setTimer" onclick="SecondDemoClick()">Set timer</button>
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+  <div class="footer">
+    <a class="floatLeft" href="firstDemo.html"><button>Previous Demo</button></a>
+    <a class="floatRight" href="thirdDemo.html"><button>Next Demo</button></a>
+  </div>
 </body>
+
 </html>

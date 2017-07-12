@@ -2,6 +2,8 @@ body
 {
     font-family: Verdana;
     background: url('../Images/background2.jpg') no-repeat center center fixed;
+    min-width: 100%;
+    min-height: 100%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -20,13 +22,20 @@ body
     top:45%;
     left:45%;
 }
+.header
+{
+    font-size: 1.9em;
+    text-align: center;
+    text-emphasis: bold;
+    font-weight: 800;
+}
 .buttonContainer
 {
     width: 31em;
     height: 6em;
     margin: 0 auto;
 }
-.bottom > a > button, .buttonContainer > button, #startButton
+.buttonContainer > button, #startButton, .footer > a > button
 {
     background-color: lawngreen;
     color: black;
@@ -41,14 +50,38 @@ body
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }
-
+#setTimer
+{
+    margin-top: 6em;
+    background-color: rgb(0, 178, 255);
+    color: black;
+    border: none;
+    border-radius: 0.9em;
+    font-weight: 600;
+    font-size: 1.6em;
+    padding: 2em 3em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4;
+}
+#setTimer:hover
+{
+    background-color: rgb(0, 40, 181);
+    color: white;
+}
+.footer > a > button
+{
+  background-color: rgb(190, 16, 64);
+}
 
 .buttonContainer > button:hover
 {
-    background-color: indigo;
+    background-color: seagreen;
     color: white;
 }
-.bottom > a > button:hover
+.footer > a > button:hover
 {
     background-color: indigo;
     color: white;
@@ -61,12 +94,22 @@ body
 
 .floatLeft
 {
+    padding-left: 5em;
     float: left;
 
 }
 .floatRight
 {
+    padding-right: 5em;
     float: right;
+}
+.secondDemoDescription
+{
+    font-size: 1.2em;
+    padding-left: 20em;
+    padding-right: 20em;
+    padding-bottom: 5em;
+    color:rgb(245, 245, 129);
 }
 
 h1.demo_header1 {
@@ -76,9 +119,13 @@ h1.demo_header1 {
     font-size: 2.5em;
 
 }
+
 .mainSection
 {
+    margin-top: 5em;
     text-align: center;
+    height: 50em;
+    width: 100%;
 }
 
 .nextDemo
@@ -94,8 +141,35 @@ h1.demo_header1 {
     top: 80%;
     left: 20%;
 }
-.bottom
+.mainSection input
 {
+    margin-top: 1em;
+    padding: 10px;
+    border: solid 1px #dcdcdc;
+    transition: box-shadow 0.3s, border 0.3s;
+}
+.mainSection input::-webkit-input-placeholder
+{
+    font-size: 1.5em;
+}
+.mainSection span
+{
+  font-size: 1.5em;
+}
+
+.mainSection > .secondDemoH2
+{
+  font-size: 1.5em;
+}
+
+.footer
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    padding: 1rem;
     width: 100%;
     height: 4em;
     margin: 0 auto;
